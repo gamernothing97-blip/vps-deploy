@@ -11,6 +11,7 @@ cd vps-deploy
 cp .env.example .env        # fill DISCORD_TOKEN, ADMIN_IDS, PUBLIC_URL
 docker compose up -d --build
 docker compose logs -f      # watch the startup checks
+python3 bot.py
 ```
 Optional Cloudflare Tunnel in Docker: set `CLOUDFLARE_TUNNEL_TOKEN` in `.env`, then
 `docker compose --profile tunnel up -d` (public hostname -> `http://localhost:8765`).

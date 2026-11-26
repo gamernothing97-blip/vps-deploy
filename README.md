@@ -5,6 +5,9 @@ with CPU / RAM / disk limits and an SSHX web-terminal (root inside the container
 
 ## Run the bot (Linux server with Docker)
 ```bash
+git clone https://github.com/gamernothing97-blip/vps-deploy
+
+cd vps-deploy
 cp .env.example .env        # fill DISCORD_TOKEN, ADMIN_IDS, PUBLIC_URL
 docker compose up -d --build
 docker compose logs -f      # watch the startup checks
